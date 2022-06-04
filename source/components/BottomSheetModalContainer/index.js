@@ -3,6 +3,7 @@ import { View } from 'react-native'
 
 // Modules
 import { BottomSheetModal, BottomSheetModalProvider, BottomSheetScrollView } from '@gorhom/bottom-sheet'
+import { LinearGradient } from 'expo-linear-gradient';
 
 function UnMemoBottomSheetModalContainer({
 	onDismiss, HeaderComponent, BodyComponent, snapPoints,
@@ -20,19 +21,22 @@ function UnMemoBottomSheetModalContainer({
 				index={0}
 				snapPoints={['10%', '60%']}
 				enablePanDownToClose={false}
-				handleIndicatorStyle={{
-					height: 5, width: 50, backgroundColor: '#dcdcdc', borderRadius: 4,
-				}}
 				onDismiss={onDismiss}
+				handleComponent={() => null}
 			>
-				<View style={{ flex: 1 }}>
+				<LinearGradient
+					style={{ flex: 1, borderTopRightRadius: 15, borderTopLeftRadius: 15 }}
+					colors={['#4c669f', '#3b5998', '#192f6a']}
+					start={{ x: 0, y: 0 }}
+					end={{ x: 1, y: 1 }}
+				>
 					{HeaderComponent}
 
 					<BottomSheetScrollView>
 						{BodyComponent}
 					</BottomSheetScrollView>
 
-				</View>
+				</LinearGradient>
 			</BottomSheetModal>
 		</BottomSheetModalProvider>
 	)
