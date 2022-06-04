@@ -19,7 +19,7 @@ function UnMemoBottomSheetModalContainer({
 			<BottomSheetModal
 				ref={modalRef}
 				index={0}
-				snapPoints={['10%', '60%']}
+				snapPoints={['6%', '60%']}
 				enablePanDownToClose={false}
 				onDismiss={onDismiss}
 				handleComponent={() => null}
@@ -28,7 +28,7 @@ function UnMemoBottomSheetModalContainer({
 					style={{ flex: 1, borderTopRightRadius: 15, borderTopLeftRadius: 15 }}
 					colors={['#4c669f', '#3b5998', '#192f6a']}
 					start={{ x: 0, y: 0 }}
-					end={{ x: 1, y: 1 }}
+					end={{ x: 1, y: 0 }}
 				>
 					{HeaderComponent}
 
