@@ -6,13 +6,17 @@ import { BottomSheetModal, BottomSheetModalProvider, BottomSheetScrollView } fro
 import { LinearGradient } from 'expo-linear-gradient';
 
 function UnMemoBottomSheetModalContainer({
-	onDismiss, HeaderComponent, BodyComponent, snapPoints,
+	onDismiss, HeaderComponent, BodyComponent, observer,
 }) {
 	const modalRef = useRef(null)
 
 	useEffect(() => {
 		modalRef.current?.present()
 	}, [])
+
+	useEffect(() => {
+		modalRef.current?.snapToIndex(0)
+	}, [observer])
 
 	return (
 		<BottomSheetModalProvider>
