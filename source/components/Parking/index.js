@@ -26,7 +26,7 @@ export function Parking() {
                 </ResponsiveText>
 
                 <ResponsiveText small style={{color: colorsPalette.font.white}}>
-                Santa Maria, Conselheiro Lafaiete - MG, Brazil
+                    Santa Maria, Conselheiro Lafaiete - MG, Brazil
                 </ResponsiveText>
 
                 <ResponsiveText small style={{color: colorsPalette.font.white}}>
@@ -34,11 +34,11 @@ export function Parking() {
                 </ResponsiveText>
             </View>
 
-            <View style={{justifyContent: 'space-between'}}>
-                <ResponsiveText p bold style={{color: colorsPalette.font.white}}>
+            <View style={{justifyContent: 'space-between', marginLeft: -5}}>
+                <ResponsiveText p bold style={{color: colorsPalette.font.white, textAlign: 'right'}}>
                     R$ 4,00
                 </ResponsiveText>
-            
+
                 <ResponsiveText small style={{color: colorsPalette.font.white}}>
                     ⭐ 4.5 de 5.0
                 </ResponsiveText>
@@ -52,6 +52,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         width: '100%',
         justifyContent: 'space-between',
-        marginVertical: 10
+        marginVertical: 10,
     }
 })
