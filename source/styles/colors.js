@@ -6,6 +6,7 @@ export const colorsPalette = {
 
 	secondary: {
 		gray: '#F0F1F2',
+		white: '#FFF',
 	},
 
 	font: {
