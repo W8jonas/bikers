@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import { View, StyleSheet, Image } from 'react-native'
+import React from 'react'
+import { View, StyleSheet, Image, TouchableOpacity } from 'react-native'
 import { colorsPalette } from '../../styles/colors'
 import { ResponsiveText } from '../ResponsiveText'
 
@@ -15,35 +15,38 @@ import Store from '../../assets/store.png'
 
 // Components
 
-export function Parking() {
+export function Parking({title, address, totalVacancies, price, score, typeOfParking, onPress}) {
+
+    const image = typeOfParking === 'house' ? House : typeOfParking === 'store' ? Store : Park
+
     return (
-        <View style={styles.container}>
-            <Image source={House} style={{height: 45, width: 45}} />
+        <TouchableOpacity onPress={onPress} style={styles.container}>
+            <Image source={image} style={{height: 45, width: 45}} />
 
             <View style={{marginLeft: 5}}>
                 <ResponsiveText p bold style={{color: colorsPalette.font.white}}>
-                    Casa da Silvinha
+                    {title}
                 </ResponsiveText>
 
                 <ResponsiveText small style={{color: colorsPalette.font.white}}>
-                    Santa Maria, Conselheiro Lafaiete - MG, Brazil
+                    {address}
                 </ResponsiveText>
 
                 <ResponsiveText small style={{color: colorsPalette.font.white}}>
-                    🚲 5 Vagas
+                    🚲 {totalVacancies} Vagas
                 </ResponsiveText>
             </View>
 
             <View style={{justifyContent: 'space-between', marginLeft: -5}}>
                 <ResponsiveText p bold style={{color: colorsPalette.font.white, textAlign: 'right'}}>
-                    R$ 4,00
+                    R$ {(price/100).toFixed(2)}
                 </ResponsiveText>
 
                 <ResponsiveText small style={{color: colorsPalette.font.white}}>
-                    ⭐ 4.5 de 5.0
+                    ⭐ {(score/10).toFixed(1)} de 5.0
                 </ResponsiveText>
             </View>
-        </View>
+        </TouchableOpacity>
     )
 }
 

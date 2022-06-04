@@ -7,6 +7,7 @@ import { BottomSheetModalContainer } from '../../components/BottomSheetModalCont
 import {InputBase} from '../../components/InputBase'
 import { ResponsiveText } from '../../components/ResponsiveText';
 import { colorsPalette } from '../../styles/colors';
+import { Parking } from '../../components/parking';
 
 const markers = [
 	{ latlng: { latitude: -23.553631343303277, longitude: -46.62037772360403 }, title: 'Título do estacionamento', description: 'Descrição do estacionamento' },
@@ -26,6 +27,9 @@ export function Home() {
 			longitude: -46.62037772360403,
 		}
 	})
+
+	const [selectedParking, setSelectedParking] = useState({})
+
 
 	return (
 		<View style={styles.container}>
@@ -47,7 +51,7 @@ export function Home() {
 					/>
 				))}
 				<Polyline
-					coordinates={addressNamesAndDirections[1].direction}
+					coordinates={addressNamesAndDirections[0].direction}
 					strokeColor="#000"
 					strokeWidth={2}
 				/>
@@ -79,7 +83,36 @@ export function Home() {
 
 							<View style={{height: 1, width: '100%', backgroundColor: colorsPalette.secondary.white}} />
 
+							<Parking
+								title={'Casa da Silvinha'}
+								address={'Santa Maria, Conselheiro Lafaiete - MG, Brasil'}
+								totalVacancies={5}
+								price={400}
+								score={45}
+								typeOfParking={'house'}
+								onPress={() => {}}
+							/>
+
+							<Parking
+								title={'Loja da Silvinha'}
+								address={'Santa Maria, Conselheiro Lafaiete - MG, Brasil'}
+								totalVacancies={5}
+								price={400}
+								score={45}
+								typeOfParking={'store'}
+								onPress={() => {}}
+							/>
 							
+							<Parking
+								title={'Parque da Silvinha'}
+								address={'Santa Maria, Conselheiro Lafaiete - MG, Brasil'}
+								totalVacancies={5}
+								price={400}
+								score={45}
+								typeOfParking={'park'}
+								onPress={() => {}}
+							/>
+
 						</View>
 					)}
 				/>
