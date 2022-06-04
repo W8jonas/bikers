@@ -61,12 +61,25 @@ export function Home() {
 						</View>
 					)}
 					BodyComponent={(
-						<View style={{ paddingHorizontal: 10, marginTop: 30 }}>
-							<InputBase
-								placeholder={'Rua Aymorés, 120'}
-								onChangeText={(text) => setAddress(text)}
-								value={address.actualPosition.name}
-							/>
+						<View style={{ paddingHorizontal: 20, marginTop: 30 }}>
+
+							<View style={{ paddingHorizontal: 10}}>
+								<InputBase
+									placeholder={'Rua Aymorés, 120'}
+									onChangeText={(text) => setAddress(text)}
+									value={address.actualPosition.name}
+								/>
+
+								<InputBase
+									placeholder={'Selecione o local'}
+									onChangeText={(text) => setAddress(text)}
+									value={address.arrivalAddress.name}
+								/>
+							</View>
+
+							<View style={{height: 1, width: '100%', backgroundColor: colorsPalette.secondary.white}} />
+
+							
 						</View>
 					)}
 				/>
