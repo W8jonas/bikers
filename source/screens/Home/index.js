@@ -16,12 +16,12 @@ export function Home() {
 
 	const [address, setAddress] = useState({
 		actualPosition: {
-			name: 'Rua Aymorés, 120',
+			name: 'Rua Mem de Sá, 189-135 - Mooca',
 			latitude: -23.553631343303277,
 			longitude: -46.62037772360403,
 		},
 		arrivalAddress: {
-			name: 'Rua Aymorés, 120',
+			name: '',
 			latitude: -23.553631343303277,
 			longitude: -46.62037772360403,
 		}
@@ -94,15 +94,15 @@ export function Home() {
 
 							<View style={{ paddingHorizontal: 10}}>
 								<InputBase
-									placeholder={'Rua Aymorés, 120'}
-									onChangeText={(text) => setAddress(text)}
+									placeholder={'Rua Mem de Sá, 189-135 - Mooca'}
 									value={address.actualPosition.name}
 								/>
 
 								<InputBase
 									placeholder={'Selecione o local'}
-									onChangeText={(text) => setAddress(text)}
+									onChangeText={(text) => setAddress(old => ({...old, arrivalAddress: {...old.arrivalAddress, name: text}}))}
 									value={address.arrivalAddress.name}
+									icon={true}
 								/>
 							</View>
 
