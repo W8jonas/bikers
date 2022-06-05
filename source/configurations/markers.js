@@ -2,14 +2,18 @@
 export const markers = [
 	{
 		latlng: { latitude: -23.553631343303277, longitude: -46.62037772360403 },
-		title: 'Título do estacionamento',
-		description: 'Descrição do estacionamento',
 		type: 'all',
-		typeOf: 'endline'
+		typeOf: 'actualPosition'
 	},
 
 
 
+	{
+		latlng: { latitude: -23.545328, longitude: -46.561003 },
+		title: 'Ponto final',
+		type: 'address1',
+		typeOf: 'endline'
+	},
 	{
 		latlng: { latitude: -23.5468779, longitude: -46.5611581 },
 		title: 'Estacionamento e lava Rápido Oba',
@@ -19,7 +23,7 @@ export const markers = [
 	},
 	{
 		latlng: { latitude: -23.545758, longitude: -46.5611943 },
-		title: 'Casa do Luís',
+		title: 'Edifício J. Guedes',
 		description: 'Minha residência tem uma camera de segurança.',
 		type: 'address1',
 		typeOf: 'house'
@@ -71,7 +75,6 @@ export const markers = [
 
 
 	// ENDEREÇO 2
-
 	{
 		latlng: { latitude: -23.543697, longitude: -46.624857 },
 		title: 'Estacionamentos Trevo - Filial 005',
@@ -93,5 +96,10 @@ export const markers = [
 		type: 'address2',
 		typeOf: 'house'
 	},
-
+	{
+		latlng: { latitude: -23.54637503778708, longitude: -46.62659630085614 },
+		title: 'Ponto final',
+		type: 'address2',
+		typeOf: 'endline'
+	},
 ]
