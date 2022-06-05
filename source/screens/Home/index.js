@@ -39,17 +39,16 @@ export function Home() {
 	const markersFiltered = useMemo(() => {
 		if (confirmedParking) {
 			if (confirmedParking.type) {
-				return markers.filter(marker => marker.type === confirmedParking.type)
+				return markers.filter(marker => marker.type === confirmedParking.type || marker.type === 'all')
 			}
 		}
-		return markers
+		return markers.filter(marker => marker.type === 'all')
 	}, [confirmedParking])
 
 	const direction = useMemo(() => {
 		if (confirmedParking) {
 			if (confirmedParking.type) {
 				const _direction = addressNamesAndDirections.find(address => address.type === confirmedParking.type)
-				console.log('_direction: ' + JSON.stringify(_direction))
 				return _direction.direction
 			}
 		}
@@ -75,11 +74,11 @@ export function Home() {
 						description={marker.description}
 					/>
 				))}
-				<Polyline
+				{direction && <Polyline
 					coordinates={direction}
 					strokeColor="#000"
 					strokeWidth={2}
-				/>
+				/>}
 			</MapView>
 
 			<View style={{position: 'absolute', bottom: 0, height: '100%', width: '100%'}}>
