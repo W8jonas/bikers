@@ -2,22 +2,21 @@ import React, { useState, useEffect } from 'react'
 import { View, Image, TouchableOpacity, StyleSheet, Modal } from 'react-native'
 import { ResponsiveText } from '../ResponsiveText'
 
-// Modules
+import House from '../../assets/home.png'
+import Park from '../../assets/park.png'
+import Store from '../../assets/store.png'
 
-// Assets
-
-// Functions
-
-// Components
 import image from '../../assets/parkings/img-1.png'
 import { colorsPalette } from '../../styles/colors'
 
 export function ConfirmModal({ visible, title, address, totalVacancies, price, score, typeOfParking, onPress }) {
+    const imageOfType = typeOfParking === 'house' ? House : typeOfParking === 'store' ? Store : Park
+    
     return (
         <Modal visible={visible} transparent>
             <View style={styles.container}>
                 <View style={styles.content}>
-                    <ResponsiveText h2 style={{color: colorsPalette.font.white}}>
+                    <ResponsiveText h2 style={{color: colorsPalette.font.white, marginLeft: 15, marginTop: 15}}>
                         Confirmar locação
                     </ResponsiveText>
 
@@ -25,12 +24,12 @@ export function ConfirmModal({ visible, title, address, totalVacancies, price, s
 
                     <View style={{flexDirection: 'row', justifyContent: 'center', width: '100%'}}>
                         <View style={styles.ball} />
-                        <View style={styles.ball} />
-                        <View style={styles.ball} />
+                        <View style={[styles.ball, {backgroundColor: '#D9D9D9'}]} />
+                        <View style={[styles.ball, {backgroundColor: '#D9D9D9'}]} />
                     </View>
 
                     <View style={styles.parkingContainer}>
-                        <Image source={image} style={{height: 45, width: 45}} />
+                        <Image source={imageOfType} style={{height: 45, width: 45}} />
 
                         <View style={{marginLeft: 5}}>
                             <ResponsiveText p bold style={{color: colorsPalette.font.white}}>
@@ -56,8 +55,43 @@ export function ConfirmModal({ visible, title, address, totalVacancies, price, s
 
                     </View>
 
-                </View>
 
+                    <View>
+                        <ResponsiveText p bold style={{color: colorsPalette.font.white, textAlign: 'right'}}>
+                            R$ {(price/100).toFixed(2)}
+                        </ResponsiveText>
+
+                        <ResponsiveText p bold style={{color: colorsPalette.font.white, textAlign: 'right'}}>
+                            R$ {(price/100).toFixed(2)}
+                        </ResponsiveText>
+
+                        <ResponsiveText p bold style={{color: colorsPalette.font.white, textAlign: 'right'}}>
+                            R$ {(price/100).toFixed(2)}
+                        </ResponsiveText>
+                    </View>
+
+
+                    <View style={{flexDirection: 'row', justifyContent: 'space-between', padding: 10}}>
+                        <TouchableOpacity
+                            onPress={() => {}}
+                            style={[styles.button, { backgroundColor: '#7B90B0' }]}
+                        >
+                            <ResponsiveText p style={{color: colorsPalette.font.white, textAlign: 'right'}}>
+                                Voltar
+                            </ResponsiveText>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity
+                            onPress={() => {}}
+                            style={[styles.button, { backgroundColor: colorsPalette.brand.blue }]}
+                        >
+                            <ResponsiveText p style={{color: colorsPalette.font.blueDark, textAlign: 'right'}}>
+                                Confirmar
+                            </ResponsiveText>
+                        </TouchableOpacity>
+                    </View>
+
+                </View>
             </View>
         </Modal>
     )
@@ -73,6 +107,8 @@ const styles = StyleSheet.create({
     content: {
         backgroundColor: colorsPalette.brand.blueDark,
         width: '90%',
+        borderRadius: 15,
+        padding: 5,
     },
     parkingContainer: {
         flexDirection: 'row',
@@ -86,6 +122,13 @@ const styles = StyleSheet.create({
         borderRadius: 12,
         marginHorizontal: 3,
         backgroundColor: colorsPalette.brand.blue
+    },
+    button: {
+        width: '44%',
+        alignItems: 'center', 
+        justifyContent: 'center',
+        borderRadius: 20, 
+        height: 36,
     }
 })
 
