@@ -33,7 +33,7 @@ export function Parking({title, address, totalVacancies, price, score, typeOfPar
 
                 <View style={{justifyContent: 'space-between', marginLeft: -5}}>
                     <ResponsiveText p bold style={{color: colorsPalette.font.white, textAlign: 'right'}}>
-                        R$ {(price/100).toFixed(2)}
+                        {price === 0 ? 'Gratuito' : `R$ ${(price/100).toFixed(2)}`}
                     </ResponsiveText>
 
                     <ResponsiveText small style={{color: colorsPalette.font.white}}>
