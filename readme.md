@@ -23,11 +23,10 @@
     <a href="#nosso-produto">Nosso Produto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
     <a href="#o-que-o-produto-faz">O que o produto faz?</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
     <a href="#tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-    <a href="#propostas-tecnológicas-e-de-produto">Propostas tecnológicas e de produto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
     <a href="#fluxo-de-usuário-e-produto-completo">Fluxo de usuário e produto completo</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
     <a href="#Nosso-time">Nosso time</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-    <a href="#o-produto">o-produto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-    <a href="#informações-adicionais">Informações adicionais</a>
+    <a href="#Discovery-do-Produto">Discovery do Produto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="#Como-evoluiremos-o-Bikers">Como evoluiremos o Bikers</a>
 </p>
 
 
@@ -79,8 +78,8 @@ Escolhemos essa stack por dois motivos principais: Nos garante desenvolvimento d
 ## Fluxo de usuário e produto completo
 
 Desenho do aplicativo no Figma:
-![app completo]()
-<!--EDIT HERE-->
+![app completo](fotos_do_projeto/figma.png)
+
 
 Acesse agora nosso vídeo de demonstração,
 <a href="https://youtu.be/rJfLbcvN_NE">
