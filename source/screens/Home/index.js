@@ -1,24 +1,16 @@
-import React, {useState} from 'react';
+import React, {useState, useMemo} from 'react';
 import MapView, { Marker, Polyline } from 'react-native-maps';
 import { StyleSheet, View, Dimensions } from 'react-native';
 import { addressNamesAndDirections } from '../../configurations/directions';
 import { BottomSheetModalContainer } from '../../components/BottomSheetModalContainer';
 
 import {InputBase} from '../../components/InputBase'
-import { ResponsiveText } from '../../components/ResponsiveText';
 import { colorsPalette } from '../../styles/colors';
 import { Parking } from '../../components/parking';
 import { parkings } from '../../configurations/parkings';
 import { ConfirmModal } from '../../components/ConfirmModal';
+import { markers } from '../../configurations/markers';
 
-const markers = [
-	{ 
-		latlng: { latitude: -23.553631343303277, longitude: -46.62037772360403 },
-		title: 'Título do estacionamento',
-		description: 'Descrição do estacionamento',
-		type: 'address1'
-	},
-]
 
 export function Home() {
 
@@ -40,9 +32,29 @@ export function Home() {
 	const [confirmedParking, setConfirmedParking] = useState({})
 
 	function handleConfirm() {
-		setConfirmedParking(confirmedParking)
+		setConfirmedParking(selectedParking)
 		setSelectedParking({})
 	}
+
+	const markersFiltered = useMemo(() => {
+		if (confirmedParking) {
+			if (confirmedParking.type) {
+				return markers.filter(marker => marker.type === confirmedParking.type)
+			}
+		}
+		return markers
+	}, [confirmedParking])
+
+	const direction = useMemo(() => {
+		if (confirmedParking) {
+			if (confirmedParking.type) {
+				const _direction = addressNamesAndDirections.find(address => address.type === confirmedParking.type)
+				console.log('_direction: ' + JSON.stringify(_direction))
+				return _direction.direction
+			}
+		}
+		return null
+	}, [confirmedParking])
 
 	return (
 		<View style={styles.container}>
@@ -55,7 +67,7 @@ export function Home() {
 					longitudeDelta: 0.0421,
 				}}
 			>
-				{markers.map((marker, index) => (
+				{markersFiltered.map((marker, index) => (
 					<Marker
 						key={index}
 						coordinate={marker.latlng}
@@ -64,7 +76,7 @@ export function Home() {
 					/>
 				))}
 				<Polyline
-					coordinates={addressNamesAndDirections[0].direction}
+					coordinates={direction}
 					strokeColor="#000"
 					strokeWidth={2}
 				/>
