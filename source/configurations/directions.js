@@ -36,8 +36,8 @@ const direction2 = [
 ]
 
 const addressNamesAndDirections = [
-    {addressName: '', direction: direction1},
-    {addressName: '', direction: direction2},
+    {type: 'address1', direction: direction1},
+    {type: 'address2', direction: direction2},
 ]
 
 export { addressNamesAndDirections }

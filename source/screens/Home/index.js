@@ -12,7 +12,12 @@ import { parkings } from '../../configurations/parkings';
 import { ConfirmModal } from '../../components/ConfirmModal';
 
 const markers = [
-	{ latlng: { latitude: -23.553631343303277, longitude: -46.62037772360403 }, title: 'Título do estacionamento', description: 'Descrição do estacionamento' },
+	{ 
+		latlng: { latitude: -23.553631343303277, longitude: -46.62037772360403 },
+		title: 'Título do estacionamento',
+		description: 'Descrição do estacionamento',
+		type: 'address1'
+	},
 ]
 
 export function Home() {

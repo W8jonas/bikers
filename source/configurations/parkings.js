@@ -7,6 +7,7 @@ export const parkings = [
 		price: 400,
 		score: 45,
 		typeOfParking: 'house',
+		type: 'address1'
 	},
 	{
 		id: 'sdfsd233',
@@ -16,6 +17,7 @@ export const parkings = [
 		price: 400,
 		score: 45,
 		typeOfParking: 'store',
+		type: 'address2'
 	},
 	{
 		id: 'ghjgh4',
@@ -25,5 +27,6 @@ export const parkings = [
 		price: 400,
 		score: 45,
 		typeOfParking: 'park',
+		type: 'address1'
 	}
 ]
