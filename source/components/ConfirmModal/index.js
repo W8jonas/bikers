@@ -56,19 +56,40 @@ export function ConfirmModal({ visible, title, address, totalVacancies, price, s
 
                     </View>
 
-
                     <View>
-                        <ResponsiveText p bold style={{color: colorsPalette.font.white, textAlign: 'right'}}>
-                            R$ {(price/100).toFixed(2)}
-                        </ResponsiveText>
+                        <View style={styles.rowContainer}>
+                            <ResponsiveText p bold style={{color: '#7B90B0'}}>
+                                R$ {(price/100).toFixed(2)}
+                            </ResponsiveText>
 
-                        <ResponsiveText p bold style={{color: colorsPalette.font.white, textAlign: 'right'}}>
-                            R$ {(price/100).toFixed(2)}
-                        </ResponsiveText>
+                            <ResponsiveText p bold style={{color: '#7B90B0'}}>
+                                R$ {(price/100).toFixed(2)}
+                            </ResponsiveText>
 
-                        <ResponsiveText p bold style={{color: colorsPalette.font.white, textAlign: 'right'}}>
-                            R$ {(price/100).toFixed(2)}
-                        </ResponsiveText>
+                            <ResponsiveText p bold style={{color: '#7B90B0'}}>
+                                R$ {(price/100).toFixed(2)}
+                            </ResponsiveText>
+                        </View>
+
+                        <View style={[styles.rowContainer, {height: 10, backgroundColor: '#fff', marginVertical: 10, marginHorizontal: 20}]}>
+                            <View style={[styles.circle, { marginLeft: -5}]} />
+                            <View style={[styles.circle]} />
+                            <View style={[styles.circle, { marginRight: -5}]} />
+                        </View>
+
+                        <View style={styles.rowContainer}>
+                            <ResponsiveText p bold style={{color: '#7B90B0'}}>
+                                4 horas
+                            </ResponsiveText>
+
+                            <ResponsiveText p bold style={{color: '#7B90B0'}}>
+                                6 horas
+                            </ResponsiveText>
+
+                            <ResponsiveText p bold style={{color: '#7B90B0'}}>
+                                8 horas
+                            </ResponsiveText>
+                        </View>
                     </View>
 
 
@@ -100,6 +121,23 @@ export function ConfirmModal({ visible, title, address, totalVacancies, price, s
 
 
 const styles = StyleSheet.create({
+    rowContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+    },
+    selectedItemBall: {
+        backgroundColor: colorsPalette.brand.blue,
+    },
+    selectedItemText: {
+        color: colorsPalette.brand.blue,
+    },
+    circle: {
+        width: 23,
+        height: 23,
+        borderRadius: 23,
+        backgroundColor: '#7B90B0'
+    },
     container: {
         flex: 1,
         alignItems: 'center', 
