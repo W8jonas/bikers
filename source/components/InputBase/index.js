@@ -1,14 +1,15 @@
 import React from 'react'
-import { View, TextInput, StyleSheet } from 'react-native'
+import { View, TextInput, StyleSheet, Image } from 'react-native'
 import { colorsPalette } from '../../styles/colors'
 
+import search from '../../assets/search.png'
 
 export function InputBase({
-	placeholder, onChangeText, containerStyle, textInputStyle, ...rest
+	placeholder, onChangeText, containerStyle, textInputStyle, icon, ...rest
 }) {
 	return (
 		<View style={[styles.container, containerStyle]}>
-			<View style={{width: 15, height: 15, backgroundColor: '#FFF', borderRadius: 15, marginHorizontal: 10,}} />
+			<View style={{width: 15, height: 15, backgroundColor: icon ? colorsPalette.brand.blue : '#FFF', borderRadius: 15, marginHorizontal: 10,}} />
 
 			<TextInput
 				style={[styles.input, textInputStyle]}
@@ -17,6 +18,8 @@ export function InputBase({
 				onChangeText={onChangeText}
 				{...rest}
 			/>
+
+			{icon && <Image source={search} style={{width: 24, height: 24, position: 'absolute', right: 10, top: 10}} />}
 		</View>
 	)
 }
