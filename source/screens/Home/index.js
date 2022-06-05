@@ -17,7 +17,10 @@ import Store from '../../assets/store.png'
 import GasTank from '../../assets/bomba-de-gasolina.png'
 import Mechanical from '../../assets/manutencao.png'
 
+import Logo from '../../assets/logo.png'
 import MenuIcon from '../../assets/menu.png'
+
+
 import { AccountModal } from '../../components/AccountModal';
 
 
@@ -156,16 +159,27 @@ export function Home() {
 				/>
 			</View>
 
+			<View style={styles.logoContainer}>
+				<View style={{width: '20%', height: 50, backgroundColor: 'transparent', position: 'absolute', top: 0, left: 0}} />
+
+				<View style={styles.logoContent}>
+					<Image source={Logo} style={{width: 108 * 1.2, height: 21 * 1.2, marginTop: 5}} />
+				</View>
+
+				<View style={{width: '20%', height: 50, backgroundColor: 'transparent', position: 'absolute', top: 0, right: 0}} />
+			</View>
+
 			<ConfirmModal
 				visible={!!selectedParking.id}
 				{...selectedParking}
 				onConfirm={handleConfirm}
 				onDismiss={() => setSelectedParking({})}
 			/>
-			
+
 			<TouchableOpacity
 				style={{position: 'absolute', top: 70, left: 20}}
 				onPress={() => setShowAccountModal(true)}
+				activeOpacity={0.7}
 			>
 				<Image source={MenuIcon} style={{width: 40, height: 40}} />
 			</TouchableOpacity>
@@ -191,4 +205,26 @@ const styles = StyleSheet.create({
 		width: Dimensions.get('window').width,
 		height: Dimensions.get('window').height,
 	},
+	logoContainer: {
+		flexDirection: 'row',
+		position: 'absolute',
+		alignItems: 'center',
+		justifyContent: 'center',
+		top: 0,
+		height: 60,
+		width: '100%',
+	},
+	logoContent: {
+		width: '60%',
+		alignSelf: 'center',
+		height: 50,
+		alignItems: 'center',
+		justifyContent: 'center',
+		backgroundColor: '#FFF',
+		borderBottomEndRadius: 32,
+		borderBottomLeftRadius: 32,
+		position: 'absolute',
+		top: 0
+	}
 });
+
