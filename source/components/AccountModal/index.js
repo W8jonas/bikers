@@ -8,22 +8,48 @@ import { colorsPalette } from '../../styles/colors'
 export function AccountModal({ visible, onDismiss }) {
 
     return (
-        <Modal visible={visible} transparent>
+        <Modal visible={visible} transparent onRequestClose={onDismiss}>
             <View style={styles.container}>
                 <View style={styles.content}>
-                    <ResponsiveText h2 style={{color: colorsPalette.font.white, marginLeft: 15, marginTop: 15}}>
+                    <ResponsiveText h3 style={{color: colorsPalette.font.white, marginLeft: 15, marginTop: 15}}>
                         Sua conta:
                     </ResponsiveText>
 
                     <TouchableOpacity
                         onPress={onDismiss}
-                        style={[styles.button, { backgroundColor: colorsPalette.brand.blue }]}
+                        style={styles.button}
                     >
-                        <ResponsiveText p style={{color: colorsPalette.font.blueDark, textAlign: 'right'}}>
-                            Confirmar
+                        <ResponsiveText p bold style={{color: colorsPalette.brand.blue, textAlign: 'right'}}>
+                            Meios de pagamento
                         </ResponsiveText>
                     </TouchableOpacity>
 
+                    <TouchableOpacity
+                        onPress={onDismiss}
+                        style={styles.button}
+                    >
+                        <ResponsiveText p bold style={{color: colorsPalette.brand.blue, textAlign: 'right'}}>
+                            Histórico de Rotas
+                        </ResponsiveText>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity
+                        onPress={onDismiss}
+                        style={styles.button}
+                    >
+                        <ResponsiveText p bold style={{color: colorsPalette.brand.blue, textAlign: 'right'}}>
+                            Rotas salvas
+                        </ResponsiveText>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity
+                        onPress={onDismiss}
+                        style={styles.button}
+                    >
+                        <ResponsiveText p bold style={{color: colorsPalette.brand.blue, textAlign: 'right'}}>
+                            Meus dados
+                        </ResponsiveText>
+                    </TouchableOpacity>
                 </View>
             </View>
         </Modal>
@@ -43,25 +69,16 @@ const styles = StyleSheet.create({
         borderRadius: 15,
         padding: 5,
     },
-    parkingContainer: {
-        flexDirection: 'row',
-        width: '90%',
-        alignSelf: 'center',
-        marginVertical: 10,
-    },
-    ball: {
-        width: 12,
-        height: 12,
-        borderRadius: 12,
-        marginHorizontal: 3,
-        backgroundColor: colorsPalette.brand.blue
-    },
     button: {
-        width: '44%',
-        alignItems: 'center', 
+        width: '95%',
+        alignItems: 'center',
+        alignSelf: 'center',
         justifyContent: 'center',
-        borderRadius: 20, 
+        borderRadius: 4, 
         height: 36,
+        borderColor: colorsPalette.brand.blue,
+        borderWidth: 1.2,
+        marginVertical: 10,
     }
 })
 
