@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { View, Image, TouchableOpacity, StyleSheet, Modal } from 'react-native'
 import { ResponsiveText } from '../ResponsiveText'
 
@@ -12,6 +12,8 @@ import { colorsPalette } from '../../styles/colors'
 
 export function ConfirmModal({ visible, title, address, totalVacancies, price, score, typeOfParking, onConfirm, onDismiss }) {
     const imageOfType = typeOfParking === 'house' ? House : typeOfParking === 'store' ? Store : Park
+
+    const [selectedPriceOption, setSelectedPriceOption] = useState(0)
 
     return (
         <Modal visible={visible} transparent>
@@ -58,35 +60,47 @@ export function ConfirmModal({ visible, title, address, totalVacancies, price, s
 
                     <View>
                         <View style={styles.rowContainer}>
-                            <ResponsiveText p bold style={{color: '#7B90B0'}}>
+                            <ResponsiveText p bold style={[{color: '#7B90B0'}, selectedPriceOption === 0 && styles.selectedItemText]}>
                                 R$ {(price/100).toFixed(2)}
                             </ResponsiveText>
 
-                            <ResponsiveText p bold style={{color: '#7B90B0'}}>
+                            <ResponsiveText p bold style={[{color: '#7B90B0'}, selectedPriceOption === 1 && styles.selectedItemText]}>
                                 R$ {(price/100).toFixed(2)}
                             </ResponsiveText>
 
-                            <ResponsiveText p bold style={{color: '#7B90B0'}}>
+                            <ResponsiveText p bold style={[{color: '#7B90B0'}, selectedPriceOption === 2 && styles.selectedItemText]}>
                                 R$ {(price/100).toFixed(2)}
                             </ResponsiveText>
                         </View>
 
                         <View style={[styles.rowContainer, {height: 10, backgroundColor: '#fff', marginVertical: 10, marginHorizontal: 20}]}>
-                            <View style={[styles.circle, { marginLeft: -5}]} />
-                            <View style={[styles.circle]} />
-                            <View style={[styles.circle, { marginRight: -5}]} />
+                            <TouchableOpacity
+                                onPress={() => setSelectedPriceOption(0)}
+                                activeOpacity={0.7}
+                                style={[styles.circle, { marginLeft: -5}, selectedPriceOption === 0 && styles.selectedItemBall]}
+                            />
+                            <TouchableOpacity
+                                onPress={() => setSelectedPriceOption(1)}
+                                activeOpacity={0.7}
+                                style={[styles.circle, selectedPriceOption === 1 && styles.selectedItemBall]}
+                            />
+                            <TouchableOpacity
+                                onPress={() => setSelectedPriceOption(2)}
+                                activeOpacity={0.7}
+                                style={[styles.circle, { marginRight: -5}, selectedPriceOption === 2 && styles.selectedItemBall]}
+                            />
                         </View>
 
                         <View style={styles.rowContainer}>
-                            <ResponsiveText p bold style={{color: '#7B90B0'}}>
+                            <ResponsiveText p bold style={[{color: '#7B90B0'}, selectedPriceOption === 0 && styles.selectedItemText]}>
                                 4 horas
                             </ResponsiveText>
 
-                            <ResponsiveText p bold style={{color: '#7B90B0'}}>
+                            <ResponsiveText p bold style={[{color: '#7B90B0'}, selectedPriceOption === 1 && styles.selectedItemText]}>
                                 6 horas
                             </ResponsiveText>
 
-                            <ResponsiveText p bold style={{color: '#7B90B0'}}>
+                            <ResponsiveText p bold style={[{color: '#7B90B0'}, selectedPriceOption === 2 && styles.selectedItemText]}>
                                 8 horas
                             </ResponsiveText>
                         </View>
