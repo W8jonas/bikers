@@ -7,6 +7,7 @@ import Park from '../../assets/park.png'
 import Store from '../../assets/store.png'
 
 import image from '../../assets/parkings/img-1.png'
+import image2 from '../../assets/parkings/img-2.png'
 import { colorsPalette } from '../../styles/colors'
 
 export function ConfirmModal({ visible, title, address, totalVacancies, price, score, typeOfParking, onConfirm, onDismiss }) {
@@ -20,7 +21,7 @@ export function ConfirmModal({ visible, title, address, totalVacancies, price, s
                         Confirmar locação
                     </ResponsiveText>
 
-                    <Image source={image} style={{width: '90%', alignSelf: 'center', marginVertical: 14}} />
+                    <Image source={title === 'Edifício J. Guedes (Frequente)' ? image2 : image} style={{width: '90%', height: 150, alignSelf: 'center', marginVertical: 14}} />
 
                     <View style={{flexDirection: 'row', justifyContent: 'center', width: '100%'}}>
                         <View style={styles.ball} />
