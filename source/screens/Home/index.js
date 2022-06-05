@@ -11,6 +11,12 @@ import { ConfirmModal } from '../../components/ConfirmModal';
 import { markers } from '../../configurations/markers';
 import { Parking } from '../../components/Parking';
 
+import House from '../../assets/home.png'
+import Park from '../../assets/park.png'
+import Store from '../../assets/store.png'
+import GasTank from '../../assets/bomba-de-gasolina.png'
+import Mechanical from '../../assets/manutencao.png'
+
 
 export function Home() {
 
@@ -27,12 +33,10 @@ export function Home() {
 		}
 	})
 
-	
 	const [selectedParking, setSelectedParking] = useState({})
-
 	const [confirmedParking, setConfirmedParking] = useState({})
-
 	const [selectedAddress, setSelectedAddress] = useState('')
+
 
 	useEffect(() => {
 		if (address.arrivalAddress.name) {
@@ -66,6 +70,7 @@ export function Home() {
 		return null
 	}, [confirmedParking])
 
+
 	return (
 		<View style={styles.container}>
 			<MapView
@@ -77,14 +82,29 @@ export function Home() {
 					longitudeDelta: 0.0421,
 				}}
 			>
-				{markersFiltered.map((marker, index) => (
-					<Marker
+				{markersFiltered.map((marker, index) => {
+					
+					const markerImage = marker.typeOf === 'house' ? House 
+						: marker.typeOf === 'store' ? Store
+						: marker.typeOf === 'parking' ? Park
+						: marker.typeOf === 'gasStation' ? GasTank
+						: marker.typeOf === 'mechanical' ? Mechanical
+						: null
+						// 'house'
+						// 'store'
+						// 'parking'
+						// 'gasStation'
+						// 'mechanical'
+						// 'endline'
+
+					return <Marker
 						key={index}
 						coordinate={marker.latlng}
 						title={marker.title}
 						description={marker.description}
+						image={markerImage && markerImage}
 					/>
-				))}
+				})}
 				{direction && <Polyline
 					coordinates={direction}
 					strokeColor="#000"
