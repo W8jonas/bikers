@@ -47,6 +47,9 @@ export function Home() {
 	const [selectedAddress, setSelectedAddress] = useState('')
 	const [showAccountModal, setShowAccountModal] = useState(false)
 
+	const [trafficIconIndicator, setTrafficIconIndicator] = useState(false)
+	const [badRoadIconIndicator, setBadRoadIconIndicator] = useState(false)
+
 
 	useEffect(() => {
 		if (address.arrivalAddress.name) {
@@ -116,6 +119,19 @@ export function Home() {
 						image={markerImage && markerImage}
 					/>
 				})}
+
+				{trafficIconIndicator && <Marker
+					coordinate={{latitude:-23.553531043303277, longitude: -46.62032772360403}}
+					title={'Muito trânsito'}
+					image={TransitoIcon}
+				/>}
+
+				{badRoadIconIndicator && <Marker
+					coordinate={{latitude:-23.553691343303277, longitude: -46.62034772360403}}
+					title={'Estrada ruim'}
+					image={EstradaIcon}
+				/>}
+
 				{direction && <Polyline
 					coordinates={direction}
 					strokeColor="#000"
@@ -190,7 +206,7 @@ export function Home() {
 
 			<TouchableOpacity
 				style={{position: 'absolute', top: 60, right: 20}}
-				onPress={() => setShowAccountModal(true)}
+				onPress={() => setBadRoadIconIndicator(old => !old)}
 				activeOpacity={0.7}
 			>
 				<Image source={EstradaIcon} style={{width: 40, height: 40}} />
@@ -198,7 +214,7 @@ export function Home() {
 
 			<TouchableOpacity
 				style={{position: 'absolute', top: 120, right: 20}}
-				onPress={() => setShowAccountModal(true)}
+				onPress={() => setTrafficIconIndicator(old => !old)}
 				activeOpacity={0.7}
 			>
 				<Image source={TransitoIcon} style={{width: 40, height: 40}} />
