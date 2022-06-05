@@ -22,7 +22,7 @@ const direction1 = [
 
     { latitude: -23.552308891358567, longitude: -46.5711587900217},
     { latitude: -23.547784678016555,longitude: -46.572017096837556},
-    { latitude: -23.54566021107507,longitude:   -46.56094493891289}
+    { latitude: -23.54566021107507, longitude: -46.56094493891289}
 ]
 
 
