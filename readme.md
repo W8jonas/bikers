@@ -1,6 +1,6 @@
 
 <h1 align="center">
-    <img alt="Bikers" src="https://user-images.githubusercontent.com/95136949/143690590-12661775-e20e-4da8-882c-049280118c17.png" width=200 />
+    <img alt="Bikers" src="fotos_do_projeto/logo.png" width=200 />
     <br>
     🚴️ Bikers 🚴
 </h1>
@@ -8,8 +8,8 @@
 <h4 align="right">
         Veja o vídeo de nossa apresentação!
     <div>
-        <a href="https://www.youtube.com">
-            <img alt="Youtube Video" src="fotos_do_projeto/google-play.png" width=200>
+        <a href="https://youtu.be/rJfLbcvN_NE">
+            <img alt="Youtube Video" src="fotos_do_projeto/youtube-logo.png" width=200>
         </a>
     <div>
 </h4>
@@ -21,6 +21,7 @@
 <p align="center">
     <a href="#Bikers">Bikers</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
     <a href="#nosso-produto">Nosso Produto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="#o-que-o-produto-faz">O que o produto faz?</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
     <a href="#tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
     <a href="#propostas-tecnológicas-e-de-produto">Propostas tecnológicas e de produto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
     <a href="#fluxo-de-usuário-e-produto-completo">Fluxo de usuário e produto completo</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -42,8 +43,7 @@ O que te faz se sentir seguro ?
 Os moradores das grandes cidades não podem compartilhar do terceiro item, isso acontece devido ao transito e  insegurança das grandes cidades, que é crescente e intimida pessoas a utilizarem a bike em seu dia a dia. 
 
 
-<!--EDIT HERE-->
-#### O que o produto faz?
+### O que o produto faz?
 Nossa solução consiste em ajudar ciclistas e entusiastas a traçar rotas melhores com menos trânsito e alertando o ciclista sobre locais uteis à sua pedalada, tais como pontos de manutenção e estacionamentos públicos e privados).
 
 Através de nossa solução o cilista pode:
@@ -61,7 +61,7 @@ Esse projeto foi desenvolvido utilizando como principal linguagem o **Javascript
 Escolhemos essa stack por dois motivos principais: Nos garante desenvolvimento de uma plataforma consistente tanto no Android quanto em dispositivos Iphone, além de proporcionar um desenvolvimento mais rápido, mas sem perder performance.
 
 <details>
-  <summary>Frontend</summary>
+  <summary>Aplicativo:</summary>
   
  - Javascript
  - React-native-maps
@@ -82,15 +82,26 @@ Desenho do aplicativo no Figma:
 ![app completo]()
 <!--EDIT HERE-->
 
+Acesse agora nosso vídeo de demonstração,
+<a href="https://youtu.be/rJfLbcvN_NE">
+clique aqui.
+</a>
+
+Acesse agora nosso vídeo PITCH,
+<a href="https://youtu.be/rJfLbcvN_NE">
+clique aqui.
+</a>
+
 <br/>
 
-### Fluxo completo de um usuário no app:
+## Fluxo completo de um usuário no app:
 
 ![app completo](fotos_do_projeto/fluxo-completo.gif)
 <!--EDIT HERE-->
 
 
-### Aplicativo completo:
+## Aplicativo completo (fotos):
+<!--EDIT HERE-->
 
 
 ## Nosso time:
@@ -98,12 +109,6 @@ Desenho do aplicativo no Figma:
 Jonas Nascimento – Desenvolvedor e Empreendedor na área de Educação Digital. <br/>
 Laís Cosmo Lopes – Profissional de Marketing e Empreendedora na área de Educação Digital. <br/>
 Victor Hugo – Gerente de produto e empreendedor educação digital. <br/>
-
-O desafio do SENAC trouxe como dor a **necessidade da interação entre alunos presenciais e alunos no digital**, de maneira que conseguisse passar a experiência SENAC de vivenciar o curso, além de ser uma plataforma que possua alto nível de segurança. 
-<!--EDIT HERE-->
-
-Mediante esse problema nossa solução foi criar a Bikers. Bikers é um aplicativo híbrido (iphone e android) white label voltado à gamificação e interação entre alunos de um determinado curso ou escola.
-<!--EDIT HERE-->
 
 <br/>
 
@@ -133,7 +138,7 @@ Laís Cosmo Lopes:&nbsp;
 </div>
 
 <div>
-Victor Hugo:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Victor Hugo:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="https://www.linkedin.com/in/victor-hugo-5a9415151/">
 <img src="https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/victor-hugo-5a9415151/" alt="Linkedin" />
 </a>&nbsp;&nbsp;&nbsp;
@@ -144,9 +149,9 @@ Victor Hugo:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 ## Discovery do Produto
 
-![image]()
+![image](fotos_do_projeto/miro.png)
 
-Após passar por uma longa jornada de desenvolvimento de produto, validações e workshops de entendimento conseguimos chegar ao que está sendo exposto hoje.
+Após passar por uma longa jornada de desenvolvimento de produto, validações e workshops de entendimento conseguimos chegar ao que está sendo exposto hoje. Utilizamos o Miro como principal ferramenta para isso.
 
 
 ### Como evoluiremos o Bikers?
@@ -155,7 +160,7 @@ No Curto prazo, pretendemos adicionar mais maneiras de cadastrar casas, condomí
 
 No médio prazo e longo, iremos  adicionar GPS selecionando rotas com ciclovias, menor trânsito, maior feedback e relacionamento entre os usuários. 
 
-![Bikerslogo-03]()
+<img alt="Bikers" src="fotos_do_projeto/logo.png" />
 
 <br/>
 
