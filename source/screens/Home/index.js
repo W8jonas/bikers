@@ -9,6 +9,7 @@ import { ResponsiveText } from '../../components/ResponsiveText';
 import { colorsPalette } from '../../styles/colors';
 import { Parking } from '../../components/parking';
 import { parkings } from '../../configurations/parkings';
+import { ConfirmModal } from '../../components/ConfirmModal';
 
 const markers = [
 	{ latlng: { latitude: -23.553631343303277, longitude: -46.62037772360403 }, title: 'Título do estacionamento', description: 'Descrição do estacionamento' },
@@ -60,6 +61,7 @@ export function Home() {
 
 			<View style={{position: 'absolute', bottom: 0, height: '100%', width: '100%'}}>
 				<BottomSheetModalContainer
+					observer={selectedParking.id}
 					HeaderComponent={(
 						<View style={{width: '100%', height: 30, justifyContent: 'center', alignItems: 'center'}}>
 							<View  style={{height: 5, width: 50, backgroundColor: '#dcdcdc', borderRadius: 4}} />
@@ -96,6 +98,11 @@ export function Home() {
 					)}
 				/>
 			</View>
+
+			<ConfirmModal
+				visible={!!selectedParking.id}
+				{...selectedParking}
+			/>
 
 		</View>
 	);
