@@ -10,7 +10,7 @@ import image from '../../assets/parkings/img-1.png'
 import image2 from '../../assets/parkings/img-2.png'
 import { colorsPalette } from '../../styles/colors'
 
-export function ConfirmModal({ visible, title, address, totalVacancies, price, score, typeOfParking, onConfirm, onDismiss }) {
+export function ConfirmModal({ visible, title, address, totalVacancies, price, price2, price3, score, typeOfParking, onConfirm, onDismiss }) {
     const imageOfType = typeOfParking === 'house' ? House : typeOfParking === 'store' ? Store : Park
 
     const [selectedPriceOption, setSelectedPriceOption] = useState(0)
@@ -61,15 +61,15 @@ export function ConfirmModal({ visible, title, address, totalVacancies, price, s
                     <View>
                         <View style={styles.rowContainer}>
                             <ResponsiveText p bold style={[{color: '#7B90B0'}, selectedPriceOption === 0 && styles.selectedItemText]}>
-                                R$ {(price/100).toFixed(2)}
+                                {price === 0 ? 'Gratuito' : `R$ ${(price/100).toFixed(2)}`}
                             </ResponsiveText>
 
                             <ResponsiveText p bold style={[{color: '#7B90B0'}, selectedPriceOption === 1 && styles.selectedItemText]}>
-                                R$ {(price/100).toFixed(2)}
+                                {price2 === 0 ? 'Gratuito' : `R$ ${(price2/100).toFixed(2)}`}
                             </ResponsiveText>
 
                             <ResponsiveText p bold style={[{color: '#7B90B0'}, selectedPriceOption === 2 && styles.selectedItemText]}>
-                                R$ {(price/100).toFixed(2)}
+                                {price3 === 0 ? 'Gratuito' : `R$ ${(price3/100).toFixed(2)}`}
                             </ResponsiveText>
                         </View>
 
@@ -139,6 +139,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
+        paddingHorizontal: 2
     },
     selectedItemBall: {
         backgroundColor: colorsPalette.brand.blue,
