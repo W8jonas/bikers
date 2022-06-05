@@ -1,4 +1,4 @@
-import React, {useState, useMemo} from 'react';
+import React, {useState, useEffect, useMemo} from 'react';
 import MapView, { Marker, Polyline } from 'react-native-maps';
 import { StyleSheet, View, Dimensions } from 'react-native';
 import { addressNamesAndDirections } from '../../configurations/directions';
@@ -6,10 +6,10 @@ import { BottomSheetModalContainer } from '../../components/BottomSheetModalCont
 
 import {InputBase} from '../../components/InputBase'
 import { colorsPalette } from '../../styles/colors';
-import { Parking } from '../../components/parking';
 import { parkings } from '../../configurations/parkings';
 import { ConfirmModal } from '../../components/ConfirmModal';
 import { markers } from '../../configurations/markers';
+import { Parking } from '../../components/Parking';
 
 
 export function Home() {
@@ -27,9 +27,20 @@ export function Home() {
 		}
 	})
 
+	
 	const [selectedParking, setSelectedParking] = useState({})
 
 	const [confirmedParking, setConfirmedParking] = useState({})
+
+	const [selectedAddress, setSelectedAddress] = useState('')
+
+	useEffect(() => {
+		if (address.arrivalAddress.name) {
+			if (address.arrivalAddress.name.includes('Monte')) return setSelectedAddress('address1')
+			if (address.arrivalAddress.name.includes('Parque')) return setSelectedAddress('address2')
+		}
+	}, [address.arrivalAddress.name])
+
 
 	function handleConfirm() {
 		setConfirmedParking(selectedParking)
@@ -108,7 +119,7 @@ export function Home() {
 
 							<View style={{height: 1, width: '100%', backgroundColor: colorsPalette.secondary.white}} />
 
-							{parkings.map(parking => (
+							{parkings.filter(parking => parking.type === selectedAddress).map(parking => (
 								<Parking
 									key={parking.id}
 									{...parking}
