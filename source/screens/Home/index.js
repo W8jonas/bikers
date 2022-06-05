@@ -16,6 +16,7 @@ import Park from '../../assets/park.png'
 import Store from '../../assets/store.png'
 import GasTank from '../../assets/bomba-de-gasolina.png'
 import Mechanical from '../../assets/manutencao.png'
+import CurrentLocationMarker from '../../assets/currentLocationMarker.png'
 
 import Logo from '../../assets/logo.png'
 import MenuIcon from '../../assets/menu.png'
@@ -96,6 +97,7 @@ export function Home() {
 						: marker.typeOf === 'parking' ? Park
 						: marker.typeOf === 'gasStation' ? GasTank
 						: marker.typeOf === 'mechanical' ? Mechanical
+						: marker.typeOf === 'actualPosition' ? CurrentLocationMarker
 						: null
 						// 'house'
 						// 'store'
