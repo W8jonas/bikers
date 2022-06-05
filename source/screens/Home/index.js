@@ -20,6 +20,8 @@ import CurrentLocationMarker from '../../assets/currentLocationMarker.png'
 
 import Logo from '../../assets/logo.png'
 import MenuIcon from '../../assets/menu.png'
+import EstradaIcon from '../../assets/estrada.png'
+import TransitoIcon from '../../assets/transito.png'
 
 
 import { AccountModal } from '../../components/AccountModal';
@@ -86,8 +88,8 @@ export function Home() {
 				initialRegion={{
 					latitude: -23.553631343303277,
 					longitude: -46.62037772360403,
-					latitudeDelta: 0.0922,
-					longitudeDelta: 0.0421,
+					latitudeDelta: 0.0922 / 4,
+					longitudeDelta: 0.0421 / 4,
 				}}
 			>
 				{markersFiltered.map((marker, index) => {
@@ -179,13 +181,28 @@ export function Home() {
 			/>
 
 			<TouchableOpacity
-				style={{position: 'absolute', top: 70, left: 20}}
+				style={{position: 'absolute', top: 60, left: 20}}
 				onPress={() => setShowAccountModal(true)}
 				activeOpacity={0.7}
 			>
 				<Image source={MenuIcon} style={{width: 40, height: 40}} />
 			</TouchableOpacity>
 
+			<TouchableOpacity
+				style={{position: 'absolute', top: 60, right: 20}}
+				onPress={() => setShowAccountModal(true)}
+				activeOpacity={0.7}
+			>
+				<Image source={EstradaIcon} style={{width: 40, height: 40}} />
+			</TouchableOpacity>
+
+			<TouchableOpacity
+				style={{position: 'absolute', top: 120, right: 20}}
+				onPress={() => setShowAccountModal(true)}
+				activeOpacity={0.7}
+			>
+				<Image source={TransitoIcon} style={{width: 40, height: 40}} />
+			</TouchableOpacity>
 
 			<AccountModal
 				visible={showAccountModal}
