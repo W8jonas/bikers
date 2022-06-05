@@ -32,6 +32,12 @@ export function Home() {
 
 	const [selectedParking, setSelectedParking] = useState({})
 
+	const [confirmedParking, setConfirmedParking] = useState({})
+
+	function handleConfirm() {
+		setConfirmedParking(confirmedParking)
+		setSelectedParking({})
+	}
 
 	return (
 		<View style={styles.container}>
@@ -102,6 +108,8 @@ export function Home() {
 			<ConfirmModal
 				visible={!!selectedParking.id}
 				{...selectedParking}
+				onConfirm={handleConfirm}
+				onDismiss={() => setSelectedParking({})}
 			/>
 
 		</View>

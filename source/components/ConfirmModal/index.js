@@ -9,9 +9,9 @@ import Store from '../../assets/store.png'
 import image from '../../assets/parkings/img-1.png'
 import { colorsPalette } from '../../styles/colors'
 
-export function ConfirmModal({ visible, title, address, totalVacancies, price, score, typeOfParking, onPress }) {
+export function ConfirmModal({ visible, title, address, totalVacancies, price, score, typeOfParking, onConfirm, onDismiss }) {
     const imageOfType = typeOfParking === 'house' ? House : typeOfParking === 'store' ? Store : Park
-    
+
     return (
         <Modal visible={visible} transparent>
             <View style={styles.container}>
@@ -73,7 +73,7 @@ export function ConfirmModal({ visible, title, address, totalVacancies, price, s
 
                     <View style={{flexDirection: 'row', justifyContent: 'space-between', padding: 10}}>
                         <TouchableOpacity
-                            onPress={() => {}}
+                            onPress={onDismiss}
                             style={[styles.button, { backgroundColor: '#7B90B0' }]}
                         >
                             <ResponsiveText p style={{color: colorsPalette.font.white, textAlign: 'right'}}>
@@ -82,7 +82,7 @@ export function ConfirmModal({ visible, title, address, totalVacancies, price, s
                         </TouchableOpacity>
 
                         <TouchableOpacity
-                            onPress={() => {}}
+                            onPress={onConfirm}
                             style={[styles.button, { backgroundColor: colorsPalette.brand.blue }]}
                         >
                             <ResponsiveText p style={{color: colorsPalette.font.blueDark, textAlign: 'right'}}>
