@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useMemo} from 'react';
 import MapView, { Marker, Polyline } from 'react-native-maps';
-import { StyleSheet, View, Dimensions } from 'react-native';
+import { StyleSheet, View, Dimensions, TouchableOpacity, Image } from 'react-native';
 import { addressNamesAndDirections } from '../../configurations/directions';
 import { BottomSheetModalContainer } from '../../components/BottomSheetModalContainer';
 
@@ -16,6 +16,9 @@ import Park from '../../assets/park.png'
 import Store from '../../assets/store.png'
 import GasTank from '../../assets/bomba-de-gasolina.png'
 import Mechanical from '../../assets/manutencao.png'
+
+import MenuIcon from '../../assets/menu.png'
+import { AccountModal } from '../../components/AccountModal';
 
 
 export function Home() {
@@ -36,6 +39,7 @@ export function Home() {
 	const [selectedParking, setSelectedParking] = useState({})
 	const [confirmedParking, setConfirmedParking] = useState({})
 	const [selectedAddress, setSelectedAddress] = useState('')
+	const [showAccountModal, setShowAccountModal] = useState(false)
 
 
 	useEffect(() => {
@@ -158,10 +162,23 @@ export function Home() {
 				onConfirm={handleConfirm}
 				onDismiss={() => setSelectedParking({})}
 			/>
+			
+			<TouchableOpacity
+				style={{position: 'absolute', top: 70, left: 20}}
+				onPress={() => setShowAccountModal(true)}
+			>
+				<Image source={MenuIcon} style={{width: 40, height: 40}} />
+			</TouchableOpacity>
 
+
+			<AccountModal
+				visible={showAccountModal}
+				onDismiss={() => setShowAccountModal(false)}
+			/>
 		</View>
 	);
 }
+
 
 const styles = StyleSheet.create({
 	container: {
