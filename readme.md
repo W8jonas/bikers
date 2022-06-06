@@ -95,12 +95,11 @@ clique aqui.
 
 ## Fluxo completo de um usuário no app:
 
-![app completo](fotos_do_projeto/fluxo-completo.gif)
-<!--EDIT HERE-->
+![](fotos_do_projeto/gif_1.gif)  |  ![](fotos_do_projeto/gif_2.gif) |  ![](fotos_do_projeto/gif_3.gif)
+|:---------------:|:----------------:|:-----------------:|
 
 
 ## Aplicativo completo (fotos):
-<!--EDIT HERE-->
 
 ![](fotos_do_projeto/foto__0.png)  |  ![](fotos_do_projeto/foto__1.png) |  ![](fotos_do_projeto/foto__2.png)  |  ![](fotos_do_projeto/foto__3.png)   
 |:---------------:|:----------------:|:-----------------:|:-----------------:|
