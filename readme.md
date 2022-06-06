@@ -9,7 +9,7 @@
         Veja o vídeo de nossa apresentação!
     <div>
         <a href="https://youtu.be/rJfLbcvN_NE">
-            <img alt="Youtube Video" src="fotos_do_projeto/youtube-logo.png" width=120>
+            <img alt="Youtube Video" src="fotos_do_projeto/youtube_logo.png" width=120>
         </a>
     <div>
 </h4>
