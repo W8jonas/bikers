@@ -6,13 +6,23 @@
 </h1>
 
 <h4 align="right">
-        Veja o vídeo de nossa apresentação!
+        Veja o vídeo pitch!
+    <div>
+        <a href="https://youtu.be/0zFZoz_nRJ4">
+            <img alt="Youtube Video" src="fotos_do_projeto/youtube_logo.png" width=120>
+        </a>
+    <div>
+</h4>
+
+<h4 align="right">
+        Veja o vídeo demonstração!
     <div>
         <a href="https://youtu.be/rJfLbcvN_NE">
             <img alt="Youtube Video" src="fotos_do_projeto/youtube_logo.png" width=120>
         </a>
     <div>
 </h4>
+
 
 <h2 align="center">
     O que te faz se sentir seguro?
@@ -25,7 +35,7 @@
     <a href="#tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
     <a href="#fluxo-de-usuário-e-produto-completo">Fluxo de usuário e produto completo</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
     <a href="#Nosso-time">Nosso time</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-    <a href="#Discovery-do-Produto">Discovery do Produto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="#Discovery-do-Produto-e-validação">Discovery do Produto e validação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
     <a href="#Como-evoluiremos-o-Bikers">Como evoluiremos o Bikers</a>
 </p>
 
@@ -43,9 +53,9 @@ Os moradores das grandes cidades não podem compartilhar do terceiro item, isso 
 
 
 ### O que o produto faz?
-Nossa solução consiste em ajudar ciclistas e entusiastas a traçar rotas melhores com menos trânsito e alertando o ciclista sobre locais uteis à sua pedalada, tais como pontos de manutenção e estacionamentos públicos e privados).
+Nossa solução consiste em ajudar ciclistas e entusiastas a traçar rotas melhores com menos trânsito e alertando o ciclista sobre locais úteis à sua pedalada, tais como pontos de manutenção e estacionamentos públicos e privados).
 
-Através de nossa solução o cilista pode:
+Através de nossa solução o ciclista pode:
 -  Alertar outros ciclistas sobre estrada de baixa qualidade e transito
 -  Traçar rotas até o seu destino final
 -  Encontrar estacionamentos públicos e privados - podendo locar uma estádia dentro do próprio aplicativo.
@@ -57,7 +67,7 @@ Além disso, o aplicativo atuará como um canal de oportunidades de topo de funi
 
 Esse projeto foi desenvolvido utilizando como principal linguagem o **Javascript**, usando o framework **React-Native** e **Expo**, além de **react-native-maps** para o mapa.
 
-Escolhemos essa stack por dois motivos principais: Nos garante desenvolvimento de uma plataforma consistente tanto no Android quanto em dispositivos Iphone, além de proporcionar um desenvolvimento mais rápido, mas sem perder performance.
+Escolhemos essa stack por dois motivos principais: Nos garante desenvolvimento de uma plataforma consistente tanto no Android quanto em dispositivos Iphone, garantindo um desenvolvimento mais rápido, mas sem perder performance. E também, porque **React-Native** se mostra hoje uma plataforma extremamente consistente e moderna, **é uma das mais utilizadas para desenvolvimento *mobile* no mundo.**
 
 <details>
   <summary>Aplicativo:</summary>
@@ -87,7 +97,7 @@ clique aqui.
 </a>
 
 Acesse agora nosso vídeo PITCH,
-<a href="https://youtu.be/rJfLbcvN_NE">
+<a href="https://youtu.be/0zFZoz_nRJ4">
 clique aqui.
 </a>
 
@@ -151,11 +161,16 @@ Victor Hugo:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </a>
 </div>
 
-## Discovery do Produto
+## Discovery do Produto e validação
 
 ![image](fotos_do_projeto/miro.png)
 
 Após passar por uma longa jornada de desenvolvimento de produto, validações e workshops de entendimento conseguimos chegar ao que está sendo exposto hoje. Utilizamos o Miro como principal ferramenta para isso.
+
+Além disso, rodamos um forms para validarmos os problemas e e entendermos melhor nossa proposta de solução, **conseguimos 41 respostas no total**. 
+Abaixo segue imagem de parte das respostas que obtivemos (Telefones de contato foram borrados)
+
+![image](fotos_do_projeto/respostas_formulario.jpg)
 
 
 ### Como evoluiremos o Bikers?
