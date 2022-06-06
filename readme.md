@@ -61,7 +61,7 @@ Através de nossa solução o ciclista pode:
 -  Encontrar estacionamentos públicos e privados - podendo locar uma estádia dentro do próprio aplicativo.
 
 
-Além disso, o aplicativo atuará como um canal de oportunidades de topo de funil para a FairFex. Pois, através do aplicativo, será possível identificar ciclistas que utilizam diariamente sua bicicleta e que tem maior aversão ao risco, logo possíveis interessados a um seguro de bicicletas. 
+Além disso, o aplicativo atuará como um canal de oportunidades de topo de funil para a FairFax. Pois, através do aplicativo, será possível identificar ciclistas que utilizam diariamente sua bicicleta e que tem maior aversão ao risco, logo possíveis interessados a um seguro de bicicletas. 
 
 ## Tecnologias
 
