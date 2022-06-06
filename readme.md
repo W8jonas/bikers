@@ -1,6 +1,6 @@
 
 <h1 align="center">
-    <img alt="Bikers" src="fotos_do_projeto/logo.png" width=200 />
+    <img alt="Bikers" src="fotos_do_projeto/logo.png" width=300 />
     <br>
     🚴️ Bikers 🚴
 </h1>
@@ -9,14 +9,14 @@
         Veja o vídeo de nossa apresentação!
     <div>
         <a href="https://youtu.be/rJfLbcvN_NE">
-            <img alt="Youtube Video" src="fotos_do_projeto/youtube-logo.png" width=200>
+            <img alt="Youtube Video" src="fotos_do_projeto/youtube-logo.png" width=120>
         </a>
     <div>
 </h4>
 
-<h3 align="center">
+<h2 align="center">
     O que te faz se sentir seguro?
-</h3>
+</h2>
 
 <p align="center">
     <a href="#Bikers">Bikers</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -102,6 +102,12 @@ clique aqui.
 ## Aplicativo completo (fotos):
 <!--EDIT HERE-->
 
+![](fotos_do_projeto/foto__0.png)  |  ![](fotos_do_projeto/foto__1.png) |  ![](fotos_do_projeto/foto__2.png)  |  ![](fotos_do_projeto/foto__3.png)   
+|:---------------:|:----------------:|:-----------------:|:-----------------:|
+
+![](fotos_do_projeto/foto__4.png)  |  ![](fotos_do_projeto/foto__5.png) |  ![](fotos_do_projeto/foto__6.png)  |  ![](fotos_do_projeto/foto__7.png)   
+|:---------------:|:----------------:|:-----------------:|:-----------------:|
+
 
 ## Nosso time:
 
@@ -137,7 +143,7 @@ Laís Cosmo Lopes:&nbsp;
 </div>
 
 <div>
-Victor Hugo:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Victor Hugo:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="https://www.linkedin.com/in/victor-hugo-5a9415151/">
 <img src="https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/victor-hugo-5a9415151/" alt="Linkedin" />
 </a>&nbsp;&nbsp;&nbsp;
@@ -159,9 +165,9 @@ No Curto prazo, pretendemos adicionar mais maneiras de cadastrar casas, condomí
 
 No médio prazo e longo, iremos  adicionar GPS selecionando rotas com ciclovias, menor trânsito, maior feedback e relacionamento entre os usuários. 
 
-<img alt="Bikers" src="fotos_do_projeto/logo.png" />
+<img alt="Bikers" src="fotos_do_projeto/logo.png" width="100%"/>
 
 <br/>
 
-vem pedalar com a gente!
+Vem pedalar com a gente!
 
